@@ -19,7 +19,7 @@ const addNewItem = () => {
   item.appendChild(deleteButton);
   list.appendChild(item);
 
-  deleteButton.addEventListener('click', () => list.removeChild(item));
+  deleteButton.addEventListener('click', () => item.remove());
 
   itemInput.focus();
 };
