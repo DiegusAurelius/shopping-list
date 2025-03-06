@@ -1,32 +1,32 @@
-const input = document.querySelector('input');
-const button = document.querySelector('button');
-const ul = document.querySelector('ul');
+const itemInput = document.querySelector('input');
+const addButton = document.querySelector('button');
+const list = document.querySelector('ul');
 
 const addNewItem = () => {
-  const newItem = input.value.trim();
+  const newItem = itemInput.value.trim();
   if (!newItem) return;
 
-  input.value = '';
+  itemInput.value = '';
 
-  const li = document.createElement('li');
-  const span = document.createElement('span');
-  const btnDelete = document.createElement('button');
+  const item = document.createElement('li');
+  const text = document.createElement('span');
+  const deleteButton = document.createElement('button');
 
-  span.textContent = newItem;
-  btnDelete.textContent = 'Delete';
+  text.textContent = newItem;
+  deleteButton.textContent = 'Delete';
 
-  li.appendChild(span);
-  li.appendChild(btnDelete);
-  ul.appendChild(li);
+  item.appendChild(text);
+  item.appendChild(deleteButton);
+  list.appendChild(item);
 
-  btnDelete.addEventListener('click', () => ul.removeChild(li));
+  deleteButton.addEventListener('click', () => list.removeChild(item));
 
-  input.focus();
+  itemInput.focus();
 };
 
-button.addEventListener('click', addNewItem);
+addButton.addEventListener('click', addNewItem);
 
-input.addEventListener('keydown', (e) => {
+itemInput.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
     addNewItem();
   }
