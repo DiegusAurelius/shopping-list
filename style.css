@@ -320,6 +320,13 @@ li {
   padding-block: var(--space-m);
 }
 
+li > span {
+  max-width: 70%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
 li > button {
   background-color: var(--color-danger);
   font-size: var(--step--2);
