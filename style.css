@@ -237,8 +237,8 @@ button {
   box-shadow: none;
   cursor: pointer;
   border: none;
-  padding-block: var(--space-2xs);
-  padding-inline: var(--space-s);
+  padding-block: var(--space-3xs);
+  padding-inline: var(--space-xs);
   font-weight: 800;
 }
 
@@ -310,7 +310,7 @@ div > button {
 }
 
 ul li:not(:first-child) {
-  border-top: 0.1em solid var(--color-primary);
+  border-top: 0.05em solid var(--color-primary);
 }
 
 li {
@@ -330,5 +330,5 @@ li > span {
 li > button {
   background-color: var(--color-danger);
   font-size: var(--step--2);
-  color: var(--color-light);
+  color: var(--color-white);
 }
